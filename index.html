@@ -1,0 +1,222 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram @MillenniumMods - By MIM (@FrostMonarhbot)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --neon-pink: #ff2d75;
+            --neon-blue: #00f2ff;
+            --neon-purple: #9600ff;
+            --neon-green: #00ff7a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-color: #0a0a10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            max-width: 600px;
+        }
+        
+        .logo-container {
+            margin-bottom: 1.5rem;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--neon-purple);
+            box-shadow: 0 0 20px rgba(150, 0, 255, 0.8),
+                        0 0 40px rgba(150, 0, 255, 0.6),
+                        0 0 60px rgba(150, 0, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 0 30px rgba(150, 0, 255, 1),
+                        0 0 50px rgba(150, 0, 255, 0.8),
+                        0 0 70px rgba(150, 0, 255, 0.6);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--neon-pink), var(--neon-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 45, 117, 0.3),
+                         0 0 20px rgba(0, 242, 255, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .developer {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.8);
+            text-shadow: 0 0 5px #fff;
+        }
+        
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            box-shadow: 0 0 15px rgba(255, 45, 117, 0.6),
+                        0 0 30px rgba(150, 0, 255, 0.4);
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .telegram-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255,255,255,0.3) 0%,
+                rgba(255,255,255,0) 60%
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+        
+        .telegram-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 45, 117, 0.8),
+                        0 0 40px rgba(150, 0, 255, 0.6);
+        }
+        
+        .telegram-btn i {
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+        
+        /* Neon Background Elements */
+        .neon-circle {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            z-index: 0;
+            animation: float 15s ease-in-out infinite;
+        }
+        
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--neon-pink);
+            top: 10%;
+            left: 10%;
+        }
+        
+        .circle-2 {
+            width: 500px;
+            height: 500px;
+            background: var(--neon-blue);
+            bottom: 10%;
+            right: 10%;
+            animation-delay: 2s;
+            animation-duration: 18s;
+        }
+        
+        .circle-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--neon-purple);
+            top: 50%;
+            left: 20%;
+            animation-delay: 4s;
+            animation-duration: 12s;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(50px, 80px) rotate(180deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 45, 117, 0.3),
+                             0 0 20px rgba(0, 242, 255, 0.3);
+            }
+            to {
+                text-shadow: 0 0 15px rgba(255, 45, 117, 0.6),
+                             0 0 25px rgba(0, 242, 255, 0.6);
+            }
+        }
+        
+        @keyframes shine {
+            to {
+                transform: translateX(100%) rotate(30deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .neon-circle {
+                filter: blur(60px);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Neon Background Circles -->
+    <div class="neon-circle circle-1"></div>
+    <div class="neon-circle circle-2"></div>
+    <div class="neon-circle circle-3"></div>
+    
+    <div class="content">
+        <div class="logo-container">
+            <img src="http://avatars.githubusercontent.com/u/184815710?v=4" alt="MillenniumMods Logo" class="logo">
+        </div>
+        <h1>Millennium Mods</h1>
+        <p class="developer">By MIM (@FrostMonarhbot)</p>
+        <a href="https://t.me/+pS437kYKMsNjOTA0" class="telegram-btn" target="_blank">
+            <i class="fab fa-telegram"></i>Telegram Channel
+        </a>
+    </div>
+</body>
+</html>
